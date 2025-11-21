@@ -6,6 +6,7 @@ import articles from "../article-content";
 import AddCommentForm from "../AddCommentForm";
 
 export default function ArticlePage() {
+  //const {user} =useUser()
   const { name } = useParams();
   const { upvotes: initialUpvotes, comments: initialComments } =
     useLoaderData();

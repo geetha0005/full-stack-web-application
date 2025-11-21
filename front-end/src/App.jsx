@@ -8,6 +8,8 @@ import NavBar from "./NavBar";
 import Layout from "./Layout";
 import NotFoundPage from "./pages/NotFoundPage";
 import axios from "axios";
+import LoginPage from "./pages/LoginPage";
+import CreateAccountPage from "./pages/CreateAccountPage";
 
 const routes = [
   {
@@ -31,6 +33,14 @@ const routes = [
         path: "/articles/:name",
         element: <ArticlePage />,
         loader: articleLoader,
+      },
+      {
+        path: "/login",
+        element: <LoginPage />,
+      },
+      {
+        path: "/create-account",
+        element: <CreateAccountPage />,
       },
 
       // {
