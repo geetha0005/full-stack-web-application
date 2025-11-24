@@ -98,6 +98,45 @@ The frontend will run on: http://localhost:5173/
     
 Backend on: http://localhost:8000/
 
+**User Authentication (Firebase)**
+
+This project uses Firebase Authentication to manage user login and signup securely.
+
+1. Implemented Email & Password Authentication, which allows users to:
+
+2. Create a new account using email and password
+
+3. Log in with their registered email and password
+
+4. Firebase automatically stores and manages these user credentials in its secure authentication system
+
+5. No passwords are stored in our backend — Firebase handles everything safely
+
+**How it works:**
+
+1. When a user signs up, we call Firebase’s
+createUserWithEmailAndPassword() method.
+Firebase creates the account and stores the user credentials.
+
+2. When a user logs in, we use
+signInWithEmailAndPassword()
+to validate the credentials with Firebase.
+
+3. After successful login, Firebase returns a secure user token.
+
+4. This token is used to verify the user on the backend using the Firebase Admin SDK.
+
+**Why Firebase Authentication?**
+
+Secure & reliable
+
+Easy login and signup flow
+
+No need to manually hash/store passwords
+
+Built-in support for tokens and session management
+
+
 **Learning Resources:**
 1. Learning using linked in: https://www.linkedin.com/learning/react-creating-and-hosting-a-full-stack-site-24928483/
 2. Axios Guide: https://axios-http.com/docs/intro
